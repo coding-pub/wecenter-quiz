@@ -1,0 +1,10 @@
+1. database tables
+
++ aws_quiz
++ aws_quiz_record
++ aws_question_quiz
++ aws_question_quiz_record
++ aws_solution
++ aws_solution_record
+
+* aws_question
