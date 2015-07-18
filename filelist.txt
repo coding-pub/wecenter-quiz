@@ -8,3 +8,23 @@
 + aws_solution_record
 
 * aws_question
+
+2. question publish
+
++ static/css/default/publish.css
++ static/js/jquery.barrating.min.js (http://antenna.io/demo/jquery-bar-rating/examples/)
++ static/js/quiz.js
++ static/css/default/quiz.css
++ static/js|css/iCheck*
+* static/js/publish.js
+* app/publish/main.php (import_js/import_css)
+* views/default/publish/index.tpl.htm
+
+* app/publish/ajax.php
++ models/quiz.php
+* models/publish.php
+* models/question.php
+* app/question/main.php
++ static/js/question.js
++ static/css/question.css
+* views/default/question/index.tpl.htm
