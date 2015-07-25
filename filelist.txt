@@ -9,7 +9,7 @@
 
 * aws_question
 
-2. question publish
+2. question quiz
 
 + static/css/default/publish.css
 + static/js/jquery.barrating.min.js (http://antenna.io/demo/jquery-bar-rating/examples/)
@@ -28,3 +28,12 @@
 + static/js/question.js
 + static/css/question.css
 * views/default/question/index.tpl.htm
+
++ static/js/sweetalert.min.js
++ static/css/default/sweetalert.css
+
+3. question solution
+
+* static/js/app/question_details.js
+* static/js/aws.js
+* static/css/common.css

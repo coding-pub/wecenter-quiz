@@ -57,39 +57,33 @@ CREATE TABLE IF NOT EXISTS `aws_question_quiz_record` (
 	`id` int(11) NOT NULL AUTO_INCREMENT COMMENT '答题纪录ID',
 	`question_id` int(11) NOT NULL COMMENT '问题ID',
 	`uid` int(11) NOT NULL COMMENT '用户ID',
-	`add_time` int(10) NOT NULL COMMENT '答题时间',
-	`user_answer` text NOT NULL COMMENT '用户答案',
-	`time_spend` int(10) DEFAULT '0' COMMENT '答题所耗费时间',
+	`start_time` int(10) NOT NULL COMMENT '答题开始时间',
+	`end_time` int(10) NOT NULL COMMENT '答题结束时间',
+	`user_answer` text COMMENT '用户答案',
+	`passed` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否通过测试',
+	`time_spend` int(10) NOT NULL DEFAULT '0' COMMENT '答题所耗费时间',
 	PRIMARY KEY (`id`),
 	KEY `question_id` (`question_id`),
 	KEY `uid` (`uid`),
-	KEY `add_time` (`add_time`)
+	KEY `start_time` (`start_time`),
+	KEY `end_time` (`end_time`),
+	KEY `passed` (`passed`),
+	KEY `time_spend` (`time_spend`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `aws_solution` (
+CREATE TABLE IF NOT EXISTS `aws_question_solution` (
 	`id` int(11) NOT NULL AUTO_INCREMENT COMMENT '答案纪录ID',
-	`question_id` int(11) NOT NULL COMMENT '问题ID',
-	`uid` int(11) NOT NULL COMMENT '用户ID',
 	`add_time` int(10) NOT NULL COMMENT '答案添加时间',
 	`update_time`  int(10) NOT NULL COMMENT '答案更新时间',
 	`content` text NOT NULL COMMENT '答案内容',
-	`required_integral` int(10) NOT NULL COMMENT '查看答案所需积分',
-	`view_count` int(11) NOT NULL DEFAULT '0' COMMENT '答案查看次数',
-	`agree_count` int(11) NOT NULL DEFAULT '0' COMMENT '赞同次数',
-	`against_count` int(11) NOT NULL DEFAULT '0' COMMENT '反对次数',
 	`has_attach` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有附件',
 	PRIMARY KEY (`id`),
-	KEY `question_id` (`question_id`),
-	KEY `uid` (`uid`),
 	KEY `add_time` (`add_time`),
 	KEY `update_time` (`update_time`),
-	KEY `required_integral` (`required_integral`),
-	KEY `view_count` (`view_count`),
-	KEY `agree_count` (`agree_count`),
-	KEY `against_count` (`against_count`)
+	KEY `has_attach` (`has_attach`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `aws_solution_record` (
+CREATE TABLE IF NOT EXISTS `aws_question_solution_record` (
 	`id` int(11) NOT NULL AUTO_INCREMENT COMMENT '答案查看记录ID',
 	`question_id` int(11) NOT NULL COMMENT '问题ID',
 	`uid` int(11) NOT NULL COMMENT '用户ID',
@@ -104,3 +98,4 @@ CREATE TABLE IF NOT EXISTS `aws_solution_record` (
 
 ALTER TABLE `aws_question` ADD COLUMN `difficulty` tinyint(2) NOT NULL DEFAULT '0' COMMENT '问题难度';
 ALTER TABLE `aws_question` ADD COLUMN `quiz_id` int(11) DEFAULT '0' COMMENT '问题内嵌测试ID';
+ALTER TABLE `aws_question` ADD COLUMN `solution_id` int(11) DEFAULT '0' COMMENT '答案详细解析ID';
