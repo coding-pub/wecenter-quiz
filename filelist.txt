@@ -17,7 +17,7 @@
 + static/css/default/quiz.css
 + static/js|css/iCheck*
 * static/js/publish.js
-* app/publish/main.php (import_js/import_css)
+* app/publish/main.php (import_js/import_css)-
 * views/default/publish/index.tpl.htm
 
 * app/publish/ajax.php
@@ -35,5 +35,22 @@
 3. question solution
 
 * static/js/app/question_details.js
+* statis/js/aws_template.js
+* statis/js/aws.js
++ models/solution.php
+* system/config/notification.php
+
+4. template
+
++ static/ma/app.min.1.css
+* views/global/header.tpl.htm
+* static/js/app.js
 * static/js/aws.js
-* static/css/common.css
+* views/notifications/ajax/list.tpl.htm
+* views/notifications/ajax/header_list.tpl.htm
+* views/css/link.css
+* views/js/aw_template.js
+
+# front-page slider management
+
++ aws_slide

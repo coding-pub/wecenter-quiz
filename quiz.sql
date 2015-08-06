@@ -94,6 +94,21 @@ CREATE TABLE IF NOT EXISTS `aws_question_solution_record` (
 	KEY `add_time` (`add_time`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+CREATE TABLE IF NOT EXISTS `aws_slide` (
+	`id` int(11) NOT NULL AUTO_INCREMENT COMMENT '幻灯片记录ID',
+	`img` varchar(255) NOT NULL DEFAULT NULL COMMENT '幻灯片图片',
+	`link` varchar(255) NOT NULL DEFAULT NULL COMMENT '幻灯片链接',
+	`title` varchar(255) COMMENT '幻灯片标题',
+	`description` text COMMENT '幻灯片描述',
+	`order` int(4) NOT NULL DEFAULT '0' COMMENT '幻灯片顺序',
+	`add_time` int(10) NOT NULL DEFAULT '0' COMMENT `添加时间`,
+	PRIMARY KEY (`id`),
+	KEY `img` (`img`),
+	KEY `link` (`link`),
+	KEY `order` (`order`),
+	KEY `add_time` (`add_time`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 -- asw_question表中需要添加的表项
 
 ALTER TABLE `aws_question` ADD COLUMN `difficulty` tinyint(2) NOT NULL DEFAULT '0' COMMENT '问题难度';
