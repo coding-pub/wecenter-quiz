@@ -53,4 +53,24 @@
 
 # front-page slider management
 
-+ aws_slide
++ aws_slide data table
++ views/default/admin/slide/list.tpl.htm
++ views/default/admin/slide/edit.tpl.htm
++ system/config/admin_menu.extension.php
+* system/config/image.php
++ app/admin/slide.php
++ app/admin/ajax/slide.php
++ models/slide.php
+* system/functions.app.php
+
+# index-page
+
+* app/explore/main.php
+
+# question-page
+
+* views/default/question/square.tpl.htm
+* app/question/main.php
+* views/default/config/pagination.php
++ views/default/question/ajax/question_difficulty.tpl.htm
++ views/default/qeustion/ajax/question_quiz_type.tpl.htm 
