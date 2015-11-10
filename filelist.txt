@@ -74,3 +74,33 @@
 * views/default/config/pagination.php
 + views/default/question/ajax/question_difficulty.tpl.htm
 + views/default/qeustion/ajax/question_quiz_type.tpl.htm 
+
+* views/block/sidebar_hot_topics.tpl.htm
+
+# topic-page
+
+* app/topic/main.php
+* models/topic.php
+* static/js/app/topic.js
+
+* app/topic/main.php
++ views/default/block/question_list.tpl.htm
+* models/topic.php
+
+# question-details-page
+
+* views/ajax/answer.tpl.htm
++ views/question/record.tpl.htm
+* models/answer.php
+* statics/css/default/sweetalert.css
+
+# publish page
+
+* js/editor/ckeditor/skins/bootstrapck/editor.css
+* js/plug_module/plug-in_module.js (bootstrap update)
+
+# question difficulty & integral settings
+
++ views/admin/integral/edit.tpl.htm
++ app/admin/integral.php
+* database:sql

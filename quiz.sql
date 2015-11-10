@@ -112,3 +112,23 @@ CREATE TABLE IF NOT EXISTS `aws_slide` (
 ALTER TABLE `aws_question` ADD COLUMN `difficulty` tinyint(2) NOT NULL DEFAULT '0' COMMENT '问题难度';
 ALTER TABLE `aws_question` ADD COLUMN `quiz_id` int(11) DEFAULT '0' COMMENT '问题内嵌测试ID';
 ALTER TABLE `aws_question` ADD COLUMN `solution_id` int(11) DEFAULT '0' COMMENT '答案详细解析ID';
+ALTER TABLE `aws_question` ADD COLUMN `is_first` tinyint(1) NOT NULL DEFAULT '0' COMMENT '出题者第一次回访';
+
+-- 新添的系统设置初始化
+
+INSERT INTO `aws_system_setting` (`varname`, `value`) VALUES
+('difficulty_level_1_text', 's:6:"休闲";'),
+('difficulty_level_1_integral', 's:2:"50";'),
+('difficulty_level_2_text', 's:6:"简单";'),
+('difficulty_level_2_integral', 's:2:"80";'),
+('difficulty_level_3_text', 's:6:"中等";'),
+('difficulty_level_3_integral', 's:3:"100";'),
+('difficulty_level_4_text', 's:6:"困难";'),
+('difficulty_level_4_integral', 's:3:"150";'),
+('difficulty_level_5_text', 's:6:"极难";'),
+('difficulty_level_5_integral', 's:3:"200";'),
+('question_quiz_correct_integral_coeffcient', 's:1:"1";'),
+('question_quiz_wrong_integral_coeffcient', 's:2:"-1";'),
+('question_quiz_timeout_integral_coeffcient', 's:2:"-2";'),
+('question_quiz_retry_integral_coeffcient', 's:4:"-1.5";'),
+('question_quiz_solution_integral_coeffcient', 's:2:"-2";');
