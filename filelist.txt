@@ -104,3 +104,10 @@
 + views/admin/integral/edit.tpl.htm
 + app/admin/integral.php
 * database:sql
+
+# article page
+
+* views/article/index.tpl.htm
+* models/favorite.php
+* app/article/main.php
+* app/article/ajax.php
