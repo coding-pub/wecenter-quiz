@@ -108,6 +108,9 @@
 # article page
 
 * views/article/index.tpl.htm
+* views/article/ajax/comment.tpl.htm
+* app/favorite/ajax.php
 * models/favorite.php
+* models/article.php
 * app/article/main.php
 * app/article/ajax.php
