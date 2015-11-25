@@ -107,6 +107,17 @@ CREATE TABLE IF NOT EXISTS `aws_slide` (
 	KEY `add_time` (`add_time`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+CREATE TABLE IF NOT EXISTS `aws_recommend_homepage` (
+	`id` int(11) NOT NULL AUTO_INCREMENT COMMENT '推荐ID',
+	`item_type` varchar(255) NOT NULL COMMENT '推荐类型',
+	`item_id` int(11) NOT NULL COMMENT '推荐项目ID',
+	`add_time` int(10) NOT NULL DEFAULT '0' COMMENT '添加时间',
+	PRIMARY KEY (`id`),
+	KEY `item_id` (`item_id`),
+	KEY `item_type` (`item_type`),
+	KEY `add_time` (`add_time`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 -- asw_question表中需要添加的表项
 
 ALTER TABLE `aws_question` ADD COLUMN `difficulty` tinyint(2) NOT NULL DEFAULT '0' COMMENT '问题难度';

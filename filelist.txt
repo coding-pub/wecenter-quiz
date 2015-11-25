@@ -114,3 +114,9 @@
 * models/article.php
 * app/article/main.php
 * app/article/ajax.php
+
+# home page
+
++ database:sql create table aws_recommend_homepage
++ app/recommend/ajax.php
++ model/recommend.php
