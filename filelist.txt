@@ -120,3 +120,7 @@
 + database:sql create table aws_recommend_homepage
 + app/recommend/ajax.php
 + model/recommend.php
+* system/config/admin_menu.extension.php
++ app/admin/recommend.php
++ app/admin/ajax/recommend.php
++ views/admin/recommend/list.tpl.htm
