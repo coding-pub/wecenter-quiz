@@ -124,3 +124,6 @@
 + app/admin/recommend.php
 + app/admin/ajax/recommend.php
 + views/admin/recommend/list.tpl.htm
++ views/block/sidebar-acticle-list.tpl.htm
++ static/js/app/explore.js
++ views/block/user_quiz_message.tpl.htm
