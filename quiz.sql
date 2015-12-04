@@ -142,4 +142,5 @@ INSERT INTO `aws_system_setting` (`varname`, `value`) VALUES
 ('question_quiz_wrong_integral_coeffcient', 's:2:"-1";'),
 ('question_quiz_timeout_integral_coeffcient', 's:2:"-2";'),
 ('question_quiz_retry_integral_coeffcient', 's:4:"-1.5";'),
-('question_quiz_solution_integral_coeffcient', 's:2:"-2";');
+('question_quiz_solution_integral_coeffcient', 's:2:"-2";'),
+('user_quiz_message_interval', 's:3:"300";');

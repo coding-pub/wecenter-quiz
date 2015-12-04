@@ -126,4 +126,14 @@
 + views/admin/recommend/list.tpl.htm
 + views/block/sidebar-acticle-list.tpl.htm
 + static/js/app/explore.js
-+ views/block/user_quiz_message.tpl.htm
+
+	## user quiz message function 
+
+	+ database:sql new settings user_quiz_message_interval;
+	* views/admin/settings.tpl.htm
+	* views/global/header_meta.tpl.htm
+	* static/js/app.js
+	* static/js/aws.js
+	* app/explore/ajax.php
+	+ views/block/user_quiz_message.tpl.htm
+	* models/quiz.php
