@@ -125,6 +125,20 @@ ALTER TABLE `aws_question` ADD COLUMN `quiz_id` int(11) DEFAULT '0' COMMENT '问
 ALTER TABLE `aws_question` ADD COLUMN `solution_id` int(11) DEFAULT '0' COMMENT '答案详细解析ID';
 ALTER TABLE `aws_question` ADD COLUMN `is_first` tinyint(1) NOT NULL DEFAULT '0' COMMENT '出题者第一次回访';
 
+ALTER TABLE `aws_question` ADD COLUMN `quiz_count_total` tinyint(11) NOT NULL DEFAULT '0' COMMENT '该问题被回答的次数';
+ALTER TABLE `aws_question` ADD COLUMN `quiz_count_passed` tinyint(11) NOT NULL DEFAULT '0' COMMENT '该问题被回答正确的次数';
+ALTER TABLE `aws_question` ADD COLUMN `quiz_count_timeout` tinyint(11) NOT NULL DEFAULT '0' COMMENT '该问题被回答超时的次数';
+ALTER TABLE `aws_question` ADD COLUMN `quiz_count_POFT` tinyint(11) NOT NULL DEFAULT '0' COMMENT '该问题第一次就回答正确(Passed On First Try)次数';
+ALTER TABLE `aws_question` ADD COLUMN `quiz_success_ratio` float NOT NULL DEFAULT '0' COMMENT '该问题的答题正确率';
+
+-- aws_account表中需要添加的表项
+
+ALTER TABLE `aws_users` ADD COLUMN `question_quiz_count_total` tinyint(11) NOT NULL DEFAULT '0' COMMENT '该用户答题次数';
+ALTER TABLE `aws_users` ADD COLUMN `question_quiz_count_passed` tinyint(11) NOT NULL DEFAULT '0' COMMENT '该用户回答正确的次数';
+ALTER TABLE `aws_users` ADD COLUMN `question_quiz_count_timeout` tinyint(11) NOT NULL DEFAULT '0' COMMENT '该用户答题超时的次数';
+ALTER TABLE `aws_users` ADD COLUMN `question_quiz_count_POFT` tinyint(11) NOT NULL DEFAULT '0' COMMENT '该用户第一次就回答正确(Passed On First Try)次数';
+ALTER TABLE `aws_users` ADD COLUMN `question_quiz_success_ratio` float NOT NULL DEFAULT '0' COMMENT '该用户答题正确率';
+
 -- 新添的系统设置初始化
 
 INSERT INTO `aws_system_setting` (`varname`, `value`) VALUES
