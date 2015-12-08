@@ -137,3 +137,13 @@
 	* app/explore/ajax.php
 	+ views/block/user_quiz_message.tpl.htm
 	* models/quiz.php
+
+	## question quiz count info system
+
+	* models/account.php
+	* models/question.php
+
+
+#question quiz record page
+
++ views/question/ajax/question_quiz_record.tpl.htm
