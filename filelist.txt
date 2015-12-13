@@ -147,3 +147,11 @@
 #question quiz record page
 
 + views/question/ajax/question_quiz_record.tpl.htm
++ block/question_list_filter_bar.tpl.htm
++ block/m_question_list_filter_bar.tpl.htm
+
+# sign-in system
+
++ dtabase:sql create table aws_sign_in
++ models/sign.php
+* views/admin/settings.tpl.htm (sign integral)

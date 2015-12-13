@@ -118,6 +118,19 @@ CREATE TABLE IF NOT EXISTS `aws_recommend_homepage` (
 	KEY `add_time` (`add_time`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+CREATE TABLE IF NOT EXISTS `aws_sign_in` (
+	`id` int(11) NOT NULL AUTO_INCREMENT COMMENT '签到ID',
+	`uid` int(11) NOT NULL COMMENT '签到用户ID',
+	`sign_time` int(10) NOT NULL COMMENT '签到时间',
+	`continous` int(6) NOT NULL DEFAULT '0' COMMENT '周期连续签到次数',
+	`continous_all` int(6) NOT NULL DEFAULT '0' COMMENT '非周期签到次数',
+	PRIMARY KEY (`id`),
+	KEY `uid` (`uid`),
+	KEY `sign_time` (`sign_time`),
+	KEY `continous` (`continous`),
+	KEY `continous_all` (`continous_all`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 -- asw_question表中需要添加的表项
 
 ALTER TABLE `aws_question` ADD COLUMN `difficulty` tinyint(2) NOT NULL DEFAULT '0' COMMENT '问题难度';
@@ -157,4 +170,6 @@ INSERT INTO `aws_system_setting` (`varname`, `value`) VALUES
 ('question_quiz_timeout_integral_coeffcient', 's:2:"-2";'),
 ('question_quiz_retry_integral_coeffcient', 's:4:"-1.5";'),
 ('question_quiz_solution_integral_coeffcient', 's:2:"-2";'),
-('user_quiz_message_interval', 's:3:"300";');
+('user_quiz_message_interval', 's:3:"300";'),
+('sign_integral_every_day', 's:3:"200";'),
+('sign_integral_seventh_day', 's:3:"500"');
