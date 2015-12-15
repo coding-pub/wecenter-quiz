@@ -155,3 +155,8 @@
 + dtabase:sql create table aws_sign_in
 + models/sign.php
 * views/admin/settings.tpl.htm (sign integral)
+
+# add question to topic function
+
+* app/topic/ajax.php
++ views/topic/ajax/cloud_topic_list.tpl.htm
