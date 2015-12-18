@@ -172,4 +172,6 @@ INSERT INTO `aws_system_setting` (`varname`, `value`) VALUES
 ('question_quiz_solution_integral_coeffcient', 's:2:"-2";'),
 ('user_quiz_message_interval', 's:3:"300";'),
 ('sign_integral_every_day', 's:3:"200";'),
-('sign_integral_seventh_day', 's:3:"500"');
+('sign_integral_seventh_day', 's:3:"500";'),
+('user_rank_list_total', 's:3:"100";'),
+('user_rank_list_perpage', 's:2:"10";');

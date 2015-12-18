@@ -160,3 +160,8 @@
 
 * app/topic/ajax.php
 + views/topic/ajax/cloud_topic_list.tpl.htm
+
+# user rank list
+
+* static/js/app/rank.js
++ views/block/user_rank_list.tpl.htm
