@@ -165,3 +165,8 @@
 
 * static/js/app/rank.js
 + views/block/user_rank_list.tpl.htm
+
+# login
+
+* static/css/login.css
+* static/icomoon files
