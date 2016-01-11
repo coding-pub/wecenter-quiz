@@ -175,3 +175,10 @@
 
 * views/global/footer.tpl.htm
 + views/blocks/fixed_side_toolbar.tpl.htm
+
+#  user page
+
+* views/people/index.tpl.htm
++ block/question_list_lite.tpl.htm
+* models/question.php
+* models/quiz.php
