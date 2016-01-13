@@ -182,3 +182,5 @@
 + block/question_list_lite.tpl.htm
 * models/question.php
 * models/quiz.php
++ block/user_homepage_menu.tpl.htm
++ views/people/following.tpl.htm
