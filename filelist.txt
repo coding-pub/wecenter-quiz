@@ -185,3 +185,5 @@
 + block/user_homepage_menu.tpl.htm
 + views/people/following.tpl.htm
 + block/user_list_lite.tpl.htm
++ block/comment_list_lite.tpl.htm
++ views/poeple/questions.tpl.htm
