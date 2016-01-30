@@ -187,3 +187,4 @@
 + block/user_list_lite.tpl.htm
 + block/comment_list_lite.tpl.htm
 + views/poeple/questions.tpl.htm
+* models/answer.php
