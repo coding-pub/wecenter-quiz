@@ -188,3 +188,8 @@
 + block/comment_list_lite.tpl.htm
 + views/poeple/questions.tpl.htm
 * models/answer.php
+
+# messages
+
+* views/inbox/index.tpl.htm
+* block/sidebar_menu.tpl.htm
