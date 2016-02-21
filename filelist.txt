@@ -193,3 +193,11 @@
 
 * views/inbox/index.tpl.htm
 * block/sidebar_menu.tpl.htm
+
+# drafts
+
++ app/draft
++ app/draft/main.php
++ app/draft/ajax.php
++ views/draft/index.tpl.htm
++ views/draft/ajax/list.tpl.htm
