@@ -201,3 +201,14 @@
 + app/draft/ajax.php
 + views/draft/index.tpl.htm
 + views/draft/ajax/list.tpl.htm
+
+# integral 
+
++ app/integral/ajax.php
++ views/integral/ajax/list.tpl.htm
+
+# invitation
+
+* views/invitation/list.tpl.htm
+* views/invitation/ajax/inviation_list.tpl.htm
+
