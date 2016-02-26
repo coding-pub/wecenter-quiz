@@ -212,3 +212,8 @@
 * views/invitation/list.tpl.htm
 * views/invitation/ajax/inviation_list.tpl.htm
 
+# search
+
+* views/search/ajax/search_result.tpl.htm
+* app/search/ajax.php
+
