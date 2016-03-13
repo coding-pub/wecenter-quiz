@@ -216,4 +216,9 @@
 
 * views/search/ajax/search_result.tpl.htm
 * app/search/ajax.php
++ views/block/article_list_lite.tpl.htm
+
+# user card
++ /static/js/easy-piechar.min.js
+
 
